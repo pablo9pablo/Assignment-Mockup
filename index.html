@@ -1,0 +1,241 @@
+/* Variables para colores (opcional pero buena práctica) */
+:root {
+    --primary-color: #1F2937; /* Fondo oscuro del header/hero y footer */
+    --secondary-color: #E5E7EB; /* Texto secundario (párrafos hero, footer, etc.) */
+    --accent-color: #3882F6; /* Botones, fondo call to action */
+    --hero-main-text: #F9FAF8; /* Título principal del hero */
+    --quote-background: #E5E7EB; /* Fondo de la sección de cita */
+    --quote-text-color: #1F2937; /* Texto de la cita */
+    --card-border: #3882F6; /* Borde de las tarjetas de info */
+    --card-image-placeholder-background: #ddd; /* Fondo para los placeholders de imagen */
+}
+
+/* Estilos Generales y Reseteo */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Asumo una fuente genérica similar */
+    display: flex; /* Para centrar el footer */
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el alto de la ventana */
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--hero-main-text);
+    padding: 8px 32px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contenedor principal para limitar el ancho del contenido */
+.container {
+    max-width: 1000px; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+/* --- SECCIÓN 1: Header / Hero --- */
+.header-hero-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 16px 0 96px 0; /* Espaciado arriba/abajo */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 96px; /* Espacio entre header y hero content */
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--hero-main-text);
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    font-size: 18px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    font-weight: extra-bold;
+    color: var(--hero-main-text);
+}
+
+.hero-left p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-image {
+    background-color: #6C757D; /* Un gris oscuro para el placeholder */
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Ancho y alto similar al mockup */
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* --- SECCIÓN 2: Información Aleatoria --- */
+.info-section {
+    padding: 48px 0 96px 0;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 36px;
+    font-weight: extra-bold;
+    color: var(--primary-color);
+    margin-bottom: 48px;
+}
+
+.info-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan en pantallas pequeñas */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-card {
+    width: 150px; /* Ancho fijo para las tarjetas */
+    text-align: center;
+}
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--card-border);
+    border-radius: 16px;
+    margin-bottom: 8px;
+    background-color: var(--card-image-placeholder-background); /* Fondo para el placeholder */
+}
+
+.info-card p {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+/* --- SECCIÓN 3: Cita Inspiradora --- */
+.quote-section {
+    background-color: var(--quote-background);
+    padding: 96px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--quote-text-color);
+    max-width: 800px; /* Limita el ancho del texto de la cita */
+    margin: 0 auto 16px auto;
+    text-align: left; /* Alinea el texto a la izquierda dentro de su bloque */
+    padding: 0 20px;
+}
+
+.quote-author {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--quote-text-color);
+    text-align: right;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- SECCIÓN 4: Call to Action --- */
+.call-to-action-section {
+    background-color: var(--hero-main-text); /* Fondo blanco */
+    padding: 96px 0;
+}
+
+.cta-box {
+    background-color: var(--accent-color);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 96px; /* Ajusta el padding para que se vea bien */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--hero-main-text);
+    gap: 20px; /* Espacio entre texto y botón */
+}
+
+.cta-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: var(--secondary-color); /* Un poco más claro para el subtexto */
+}
+
+/* --- SECCIÓN 5: Footer --- */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 32px 0;
+    font-size: 18px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
